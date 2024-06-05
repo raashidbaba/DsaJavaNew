@@ -1,3 +1,5 @@
+package Arrays;
+
 public class DiffSizeColum {
     public static void main(String[] args) {
         int[][] arr = {
