@@ -6,7 +6,7 @@ fun main(){
     var numm = 1244
 //    print(revString(str))
 //    print(cd(numm))
-    print(revNo(numm))
+   //// print(revNo(numm))
 
 
 }
