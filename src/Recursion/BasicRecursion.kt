@@ -4,7 +4,9 @@ fun main(){
 //    f1()
 //    f2()
 //    f3(1,4)
-    f4(4,1)
+//    f4(4,1)
+//    f5(5,5)
+    f6(1,5)
 }
 
 
@@ -46,4 +48,25 @@ fun f4(i:Int,n:Int){
     println(i)
     f4(i-1,n)
 
+}
+
+
+
+//print 1 to n using backtracking
+fun f5(i:Int,n:Int){
+    if (i<1){
+        return
+    }
+    f5(i-1,n)
+    println(i)
+}
+
+
+//print n to 1 using backtracking
+fun f6(i:Int,n:Int){
+    if (i>n){
+        return
+    }
+    f6(i+1,n)
+    println(i)
 }
