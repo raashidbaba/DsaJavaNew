@@ -4,7 +4,9 @@ import java.util.concurrent.Flow
 fun main() {
     val revString = "hello"
     val numsss = 153
-    val arr = arrayOf(1, 2, 3, 4, 6, 7, 8)
+    val arr = arrayOf(1, 2, 3, 4, 6,2, 7, 8)
+
+//    duplicatesStr(revString)
 //        print(reverStr(revString))
 //    print(reverseNumb(numsss))
 //    print("Count of digits in $numsss: ${countDigits(numsss)}")
@@ -14,14 +16,14 @@ fun main() {
 //        print(isPrime(13))
 //    print(fibonacci(5))
 //    fibonacci(5)
-//    duplicates(arr)
+    duplicates(arr)
 //        print(missingNumb(arr,18))
 //    pattern1(5)
 //    p1(5)
 //      p5(5)
 //    p6(5)
-    val arr1 = arrayOf(1,2,3,4,5)
-    arr1.set(2,30)
+//    val arr1 = arrayOf(1,2,3,4,5)
+//    arr1.set(2,30)
 //    for (i in arr1){
 
 //        if (1 in arr1){
@@ -29,27 +31,27 @@ fun main() {
 //        }
 
 //    }
-    val theMap = HashMap<String, Int>()
-
-    theMap["one"] = 1
-    theMap["two"] = 2
-    theMap["three"] = 3
-    theMap["four"] = 4
-
-    print(theMap)
-
-    for ((name, marks) in theMap) {
-        println("$name scored $marks")
-    }
-
-
-    val set = setOf(1,2,4,5)
-
-    print(set)
-
-    for (i in set){
-        print(i)
-    }
+//    val theMap = HashMap<String, Int>()
+//
+//    theMap["one"] = 1
+//    theMap["two"] = 2
+//    theMap["three"] = 3
+//    theMap["four"] = 4
+//
+//    print(theMap)
+//
+//    for ((name, marks) in theMap) {
+//        println("$name scored $marks")
+//    }
+//
+//
+//    val set = setOf(1,2,4,5)
+//
+//    print(set)
+//
+//    for (i in set){
+//        print(i)
+//    }
 }
 
 
@@ -108,8 +110,10 @@ fun palindrome(numb: Int): Boolean {
 }
 
 
-//arm strong number
+//arm strong number -> is a number that is equal to the
+// sum of its own digits each raised to the power of the number of digits.
 fun armStrong(numb: Int): Boolean {
+    var digits = numb.toString().length
     var n = numb
     var revNo = 0
     var sum = 0
@@ -120,7 +124,9 @@ fun armStrong(numb: Int): Boolean {
 
         //sum + cube of number everytime
         //sum stores the whole value
-        sum = (sum) + lD * lD * lD
+//        sum = (sum) + lD * lD * lD
+        sum += Math.pow(lD.toDouble(),digits.toDouble()).toInt()
+        print("sum ${ sum}")
 
     }
 
@@ -183,6 +189,17 @@ fun fibonacci(n: Int) {
         val temp = a + b
         a = b
         b = temp
+    }
+}
+
+
+fun duplicatesStr(input: String){
+    for(i in 0..input.length-1){
+        for (j in i+1 until input.length){
+            if (input[i]==input[j]){
+                print("dup ${input[i]}")
+            }
+        }
     }
 }
 
