@@ -4,10 +4,17 @@
 fun main(){
     var str = "hello"
     var numm = 1244
+    var arr = arrayOf(5,2,1,4,6)
 //    print(revString(str))
 //    print(cd(numm))
    //// print(revNo(numm))
+    for (i in 0..arr.size-1){
+        print(arr[i])
+    }
 
+    for (i in arr.indices){
+        println(i)
+    }
 
 }
 
@@ -51,5 +58,6 @@ fun main(){
     }
     return revNo
 }*/
+
 
 
