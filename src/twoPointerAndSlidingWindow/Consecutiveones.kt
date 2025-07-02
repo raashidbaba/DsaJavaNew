@@ -27,7 +27,10 @@ fun consecutiveOnes(nums:IntArray,k:Int):Int{
             left++
         }
 
-        maxLen = maxOf(maxLen, right - left + 1)
+        if (zeroCount<=k){
+            maxLen = maxOf(maxLen,right-left+1)
+            //increment is controlled by for loop
+        }
     }
 
     return maxLen
