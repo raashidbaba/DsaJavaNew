@@ -15,7 +15,7 @@ fun main() {
 
     //fetching
     for (q in queries){
-        val count = if (q in queries.indices){
+         val count = if (q in freq.indices){
             freq[q]
         }else{
             0
