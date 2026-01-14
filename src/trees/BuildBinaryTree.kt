@@ -26,10 +26,10 @@ fun buildBinaryTree(preOrder:IntArray):TreeNode?{
         val node = TreeNode(value = value)
 
     // Build left subtree
-    node.left = buildBinaryTree(preOrder)
+//    node.left = buildBinaryTree(preOrder)
 
     // Build right subtree
-    node.right = buildBinaryTree(preOrder)
+//    node.right = buildBinaryTree(preOrder)
 
     return node
 }

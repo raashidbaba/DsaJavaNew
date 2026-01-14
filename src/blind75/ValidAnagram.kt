@@ -28,6 +28,9 @@ fun validAnagram(s:String,r:String):Boolean{
         hashMap12[r[i]] = hashMap12.getOrDefault(r[i], 0) + 1
     }
 
+    println(hashMap1)
+    println(hashMap12)
+
 //order does not matter here
 return hashMap1==hashMap12
 }
