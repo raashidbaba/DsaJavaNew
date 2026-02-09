@@ -1,0 +1,4 @@
+package leetcodeEasy
+
+class RemoveElement {
+}
