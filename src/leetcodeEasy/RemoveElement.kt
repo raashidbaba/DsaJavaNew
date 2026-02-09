@@ -1,6 +1,8 @@
 package leetcodeEasy
 
+fun main(){
 
+}
 
 class RemoveElement {
     fun removeElement(nums: IntArray, `val`: Int): Int {
