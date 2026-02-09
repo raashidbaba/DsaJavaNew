@@ -2,6 +2,7 @@ package leetcodeEasy
 
 fun main(){
         print("is git working")
+        print("git test")
 }
 
 class RemoveElement {
