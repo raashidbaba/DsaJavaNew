@@ -4,6 +4,7 @@ fun main(){
         print("is git working")
         print("git test")
         print("git check push")
+        print("git graph working?")
 }
 
 class RemoveElement {
