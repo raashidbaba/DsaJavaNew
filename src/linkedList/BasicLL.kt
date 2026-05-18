@@ -7,13 +7,13 @@ fun main() {
 
     var curr = head
     while (curr != null) {
-        print("${curr.`val`} -> ")
+        print("${curr.value} -> ")
         curr = curr.next
     }
     println("null")
 }
 
-class ListNode(var `val`: Int) {
+class ListNode(var value : Int) {
     var next: ListNode? = null
 }
 
@@ -24,3 +24,9 @@ fun pushFront(value: Int) {
     newNode.next = head
     head = newNode
 }
+
+
+
+
+
+

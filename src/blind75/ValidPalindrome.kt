@@ -27,13 +27,12 @@ fun validPalindromeTwoPointer(s:String):Boolean{
             right--
         }
 
-        if (left < right && left < right) {
             if (s[left].lowercaseChar() != s[right].lowercaseChar()) {
                 return false
             }
             left++
             right--
-        }
+
 
     }
     return true

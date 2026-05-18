@@ -4,7 +4,7 @@ fun main(){
     val arr = intArrayOf(1,2,2,3,3,3,3,3)
     val k = 2
     val sol = optimisedTopKFreq(arr,k)
-    print(sol.contentToString())
+    println(sol.contentToString())
 
 }
 
@@ -48,13 +48,17 @@ fun optimisedTopKFreq(arr:IntArray,k:Int):IntArray{
     for (arr1 in arr){
         countMap[arr1] = countMap.getOrDefault(arr1,0)+1
     }
+    println("${countMap}")
 
     //add elements -> with frequency and elements
     val bucket = Array(arr.size+1){ mutableListOf<Int>() }
     for ((number,freq) in countMap){
+
+        //the trick part here to solve in linear TC.
         bucket[freq].add(number)
 
     }
+    println(bucket.contentToString())
 
     //add top k elements in list
     //also how many times an element occurs

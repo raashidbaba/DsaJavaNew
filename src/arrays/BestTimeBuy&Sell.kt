@@ -10,14 +10,20 @@ fun main(){
 
 
 fun buyAndSell(nums:IntArray):Int{
-    var min = nums[0]
-    var profit = 0
+    var l = 0
+    var r = 0
+    var maxProfit = 0
 
-    for (i in 1 until nums.size){
-        val cost = nums[i]-min
-        profit = maxOf(profit,cost)
-        min = minOf(min,nums[i])
+    while (r< nums.size){
+        if (nums[l]< nums[r]){
+
+            val profit = nums[r]-nums[l]
+            maxProfit = maxOf(maxProfit,profit)
+        }else{
+            l = r
+        }
+        r++
+
     }
-
-    return profit
+    return maxProfit
 }

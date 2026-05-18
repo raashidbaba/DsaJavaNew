@@ -2,7 +2,7 @@ package blind75
 
 fun main() {
 
-    val s = "([])"
+    val s = "[(])"
 
     println(validParenthesis(s))  // prints: true
 }
@@ -15,6 +15,7 @@ fun validParenthesis(str: String): Boolean {
     for (ch in str) {
         if (ch == '(' || ch == '{' || ch == '[') {
             stack.addLast(ch)   // push
+
         } else {
             if (stack.isEmpty()) return false
 
